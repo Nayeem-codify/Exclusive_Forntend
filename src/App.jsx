@@ -1,9 +1,23 @@
-import React from 'react'
+import React from "react";
+import {
+  createRoutesFromElements,
+  createBrowserRouter,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import Header from "./Component/RootLayout/Header/index.jsx";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route>
+      <Route path="/home" element={"this is my home route"} />
+      <Route path="/" element={<Header />} />
+    </Route>
+  )
+);
 
 const App = () => {
-  return (
-    <div className= "bg-green-500">App</div>
-  )
-}
+  return <RouterProvider router={router} />;
+};
 
-export default App
+export default App;
