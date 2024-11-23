@@ -53,10 +53,10 @@ const Navbar = () => {
           <div className="basis-1/3  relative">
             <input
               type="text"
-              className="py-2 bg-white_F5F5F5 rounded-[10px] px-12 "
+              className="py-2 bg-white_F5F5F5 rounded-[10px]  px-[70px] "
               placeholder="What are you looking for?"
             />
-            <span className="absolute top-1/2 -translate-y-1/2 text-xl right-[48%]">
+            <span className="absolute top-1/2 -translate-y-1/2 text-xl right-[40%]">
               <FiSearch />
             </span>
           </div>
