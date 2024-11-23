@@ -13,7 +13,11 @@ const Header = () => {
             </h2>
           </div>
           <div>
-            <select className="bg-black text-white_FFFFFF " name="" id="">
+            <select
+              className="bg-black text-white_FFFFFF font-poppins  text-[18px] font-normal "
+              name=""
+              id=""
+            >
               <option value="#">English</option>
               <option value="#">Bangla</option>
               <option value="#">Spanish</option>

@@ -39,3 +39,22 @@
   --poppins: "Poppins", serif;
   --inter: "Inter", serif;
 }
+@layer components {
+  .menuUnderLine {
+    position: relative;
+  }
+  .menuUnderLine::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    height: 2px;
+    left: 0;
+    width: 100%;
+    background-color: var(--text_black7D8184);
+    transform: scale(0);
+  }
+  .menuUnderLine:hover::after {
+    transform: scale(1);
+    transition: all 0.5s;
+  }
+}
