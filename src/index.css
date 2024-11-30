@@ -53,8 +53,30 @@
     background-color: var(--text_black7D8184);
     transform: scale(0);
   }
+
   .menuUnderLine:hover::after {
     transform: scale(1);
     transition: all 0.5s;
+  }
+  .amount {
+    position: relative;
+  }
+  .amount::after {
+    position: absolute;
+    content: "0";
+    left: 47%;
+    top: -38%;
+    width: 20px;
+    height: 18px;
+    line-height: 19px;
+    font-size: 10px;
+    background-color: var(--redDB4444);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    text-align: center;
+    color: var(--text_black000000);
   }
 }

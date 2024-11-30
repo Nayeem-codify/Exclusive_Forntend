@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
+import { IoMdHeartEmpty } from "react-icons/io";
+import { FaCartArrowDown, FaRegUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
   const navItem = [
@@ -40,8 +42,8 @@ const Navbar = () => {
                       isPending
                         ? "text-black text-[17px] font-normal font-poppins"
                         : isActive
-                        ? "text-red-500 text-[17px] font-normal font-poppins"
-                        : "text-black text-[17px] font-normal font-poppins"
+                        ? "text-red-500 text-[17px] font-normal font-poppins "
+                        : "text-black text-[17px] font-normal font-poppins hover:text-[#db4444] transition-all duration-150"
                     }
                   >
                     {nav.item}
@@ -50,15 +52,28 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-          <div className="basis-1/3  relative">
-            <input
-              type="text"
-              className="py-2 bg-white_F5F5F5 rounded-[10px]  px-[70px] "
-              placeholder="What are you looking for?"
-            />
-            <span className="absolute top-1/2 -translate-y-1/2 text-xl right-[40%]">
-              <FiSearch />
-            </span>
+          <div className="basis-1/3  relative  flex items-center">
+            <div>
+              <input
+                type="text"
+                className="py-2 bg-white_F5F5F5 rounded-[10px]  px-[60px] "
+                placeholder="What are you looking for?"
+              />
+              <span className="absolute top-1/2 -translate-y-1/2 text-xl right-[35%]">
+                <FiSearch />
+              </span>
+            </div>
+            <div className="flex items-center gap-x-5 ">
+              <span className="bg-text-text_black000000 text-2xl">
+                <IoMdHeartEmpty />
+              </span>
+              <span className="bg-text-text_black000000 text-2xl amount">
+                <FaCartArrowDown />
+              </span>
+              <span className="bg-text-text_black000000 text-2xl">
+                <FaRegUserCircle />
+              </span>
+            </div>
           </div>
         </div>
       </div>

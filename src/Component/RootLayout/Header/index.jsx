@@ -9,7 +9,7 @@ const Header = () => {
           <div>
             <h2 className="text-white_FFFFFF font-poppins  text-[18px] font-normal">
               Summer Sale For All Swim Suits And Free Express Delivery - OFF
-              50%!
+              50%! <u>ShopNow</u>
             </h2>
           </div>
           <div>
