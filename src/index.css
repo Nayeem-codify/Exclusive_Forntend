@@ -60,6 +60,7 @@
   }
   .amount {
     position: relative;
+    
   }
   .amount::after {
     position: absolute;
@@ -77,6 +78,6 @@
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     text-align: center;
-    color: var(--text_black000000);
+    color: var(--white_FFFFFF);
   }
 }
