@@ -1,5 +1,5 @@
 import React from "react";
-import { category } from "../../../../Data/Data";
+import { category } from "../../../../Data/data.js";
 import { LiaAngleRightSolid } from "react-icons/lia";
 
 const Banner = () => {
