@@ -84,7 +84,7 @@ const Navbar = () => {
                 <FaUser />
               </span>
               {account && (
-                <div className="absolute top-[130%] left-[40%] bg-[rgba(0,0,0,0.2)] w-[65%] px-7 flex flex-col gap-y-3 py-7 rounded">
+                <div className="absolute top-[140%] left-[40%] bg-[rgba(0,0,0,0.2)] w-[65%] px-7 flex flex-col gap-y-3 py-7 rounded">
                   <div className="flex items-center gap-x-2  ">
                     <span className="text-text_black000000 text-2xl ">
                       <CiUser />
