@@ -84,44 +84,44 @@ const Navbar = () => {
                 <FaUser />
               </span>
               {account && (
-                <div className="absolute top-[140%] left-[40%] bg-[rgba(0,0,0,0.2)] w-[65%] px-7 flex flex-col gap-y-3 py-7 rounded">
+                <div className="absolute top-[140%] left-[40%] z-30 bg-[rgba(0,0,0,0.60)] w-[65%] px-7 flex flex-col gap-y-3 py-7 rounded">
                   <div className="flex items-center gap-x-2  ">
-                    <span className="text-text_black000000 text-2xl ">
+                    <span className="text-text_whiteFAFAFA text-2xl ">
                       <CiUser />
                     </span>
-                    <h3 className="text-text_black000000 font-poppins font-normal text-xl hover:bg-transparent hover:text-red-600 hover:py-3 transition-all hover:cursor-pointer ">
+                    <h3 className="text-text_whiteFAFAFA font-poppins font-normal text-xl hover:bg-transparent hover:text-red-600 hover:py-3 transition-all hover:cursor-pointer ">
                       Manage My Account
                     </h3>
                   </div>
                   <div className="flex items-center gap-x-2">
-                    <span className="text-text_black000000 text-2xl">
+                    <span className="text-text_whiteFAFAFA text-2xl">
                       <CiWallet />
                     </span>
-                    <h3 className=" font-poppins font-normal text-xl  hover:bg-transparent hover:text-red-600  hover:py-3 transition-all hover:cursor-pointer">
+                    <h3 className="text-text_whiteFAFAFA font-poppins font-normal text-xl  hover:bg-transparent hover:text-red-600  hover:py-3 transition-all hover:cursor-pointer">
                       My Order
                     </h3>
                   </div>
                   <div className="flex items-center gap-x-2">
-                    <span className="text-text_black000000 text-2xl">
+                    <span className="text-text_whiteFAFAFA text-2xl">
                       <MdOutlineCollections />
                     </span>
-                    <h3 className=" font-poppins font-normal text-xl  hover:bg-transparent hover:text-red-600  hover:py-3 transition-all hover:cursor-pointer">
+                    <h3 className=" text-text_whiteFAFAFA font-poppins font-normal text-xl  hover:bg-transparent hover:text-red-600  hover:py-3 transition-all hover:cursor-pointer">
                       My Cancellations
                     </h3>
                   </div>
                   <div className="flex items-center gap-x-2">
-                    <span className="text-text_black000000 text-2xl">
+                    <span className="text-text_whiteFAFAFA text-2xl">
                       <CiStar />
                     </span>
-                    <h3 className=" font-poppins font-normal text-xl  hover:bg-transparent hover:text-red-600  hover:py-3 transition-all hover:cursor-pointer">
+                    <h3 className="text-text_whiteFAFAFA font-poppins font-normal text-xl  hover:bg-transparent hover:text-red-600  hover:py-3 transition-all hover:cursor-pointer">
                       My Reviews
                     </h3>
                   </div>
                   <div className="flex items-center gap-x-2">
-                    <span className="text-text_black000000 text-2xl">
+                    <span className="text-text_whiteFAFAFA text-2xl">
                       <CiLogout />
                     </span>
-                    <h3 className=" font-poppins font-normal text-xl  hover:bg-transparent hover:text-red-600  hover:py-3 transition-all hover:cursor-pointer">
+                    <h3 className="text-text_whiteFAFAFA font-poppins font-normal text-xl  hover:bg-transparent hover:text-red-700  hover:py-3 transition-all hover:cursor-pointer">
                       Logout
                     </h3>
                   </div>

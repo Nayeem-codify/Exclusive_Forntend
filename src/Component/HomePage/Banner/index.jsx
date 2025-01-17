@@ -2,12 +2,7 @@ import React from "react";
 import { category } from "../../../../Data/data.js";
 import "slick-carousel/slick/slick.css";
 import Slider from "react-slick";
-import bannerimg from "../../../assets/banner/banner.jpg"
-import bannerimg1 from "../../../assets/banner/banner1.jpg"
-import bannerimg2 from "../../../assets/banner/banner2.jpg"
-import bannerimg3 from "../../../assets/banner/banner3.jpg" 
-import bannerimg4 from "../../../assets/banner/banner4.jpg"
-import bannerimg5 from "../../../assets/banner/banner5.jpg"
+import bannerimg1 from "../../../assets/banner/banner1.jpg";
 import { LiaAngleRightSolid } from "react-icons/lia";
 
 const Banner = () => {
@@ -16,8 +11,20 @@ const Banner = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     pauseOnHover: true,
+    arrows: false,
+    appendDots: dots => (
+      <div
+        style={{
+          backgroundColor: "#ddd",
+          borderRadius: "10px",
+          padding: "10px"
+        }}
+      >
+        <ul style={{ margin: "0px" }}> {dots} </ul>
+      </div>
+    ),
   };
   return (
     <div className="container">
@@ -38,26 +45,19 @@ const Banner = () => {
             ))}
           </ul>
         </div>
-        <div className="w-[77%]">
+        <div className="w-[77%] pl-10 px-[40px]">
           <Slider {...settings}>
-            <div>
-              <img src={bannerimg} alt={bannerimg} />
-            </div>
-            <div>
-              <img src={bannerimg1} alt={bannerimg} />
-            </div>
-            <div>
-              <img src={bannerimg2} alt={bannerimg} />
-            </div>
-            <div>
-              <img src={bannerimg3} alt={bannerimg} />
-            </div>
-            <div>
-              <img src={bannerimg4} alt={bannerimg} />
-            </div>
-            <div>
-              <img src={bannerimg5} alt={bannerimg} />
-            </div>
+            {[...new Array(6)].map((_, index) => (
+              (
+                <div key={index}>
+                  <img
+                    src={bannerimg1}
+                    alt={bannerimg1}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              )  
+            ))}
           </Slider>
         </div>
       </div>
