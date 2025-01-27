@@ -7,6 +7,7 @@ import { LiaAngleRightSolid } from "react-icons/lia";
 
 const Banner = () => {
   const settings = {
+    dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -14,17 +15,34 @@ const Banner = () => {
     autoplaySpeed: 3000,
     pauseOnHover: true,
     arrows: false,
-    appendDots: dots => (
+    appendDots: (dots) => (
       <div
         style={{
-          backgroundColor: "#ddd",
-          borderRadius: "10px",
-          padding: "10px"
+          position: "absolute",
+          bottom: "5%",
+          left: "50%",
+          transform: "translateX(-50%)",
+          zIndex: "1000",
         }}
       >
-        <ul style={{ margin: "0px" }}> {dots} </ul>
+        <ul style={{ margin: "0px", display: "flex" }}> {dots} </ul>
       </div>
     ),
+    customPaging: (i) => (
+      <div
+        style={{
+          width: "20px",
+          height: "20px",
+          borderRadius: "50%",
+          background: "#fff",
+          opacity: "0.5",
+          marginRight: "12px",
+        }}
+      ></div>
+    ),
+    afterChange:function (currentSlide){
+       console.log("after Change : ", currentSlide);
+    }
   };
   return (
     <div className="container">
@@ -48,15 +66,13 @@ const Banner = () => {
         <div className="w-[77%] pl-10 px-[40px]">
           <Slider {...settings}>
             {[...new Array(6)].map((_, index) => (
-              (
-                <div key={index}>
-                  <img
-                    src={bannerimg1}
-                    alt={bannerimg1}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-              )  
+              <div key={index}>
+                <img
+                  src={bannerimg1}
+                  alt={bannerimg1}
+                  className="h-full w-full object-cover"
+                />
+              </div>
             ))}
           </Slider>
         </div>

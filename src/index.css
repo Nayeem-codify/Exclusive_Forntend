@@ -80,3 +80,11 @@
     color: var(--white_FFFFFF);
   }
 }
+/* .slick-active {
+  background-color: var(--redDB4444);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--white_FFFFFF);
+  margin-right: 12px,
+} */
