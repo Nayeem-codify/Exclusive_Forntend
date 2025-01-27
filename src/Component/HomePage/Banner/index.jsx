@@ -40,9 +40,9 @@ const Banner = () => {
         }}
       ></div>
     ),
-    afterChange:function (currentSlide){
-       console.log("after Change : ", currentSlide);
-    }
+    afterChange: function (currentSlide) {
+      console.log("after Change : ", currentSlide);
+    },
   };
   return (
     <div className="container">
