@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { category } from "../../../../Data/data.js";
 import "slick-carousel/slick/slick.css";
 import Slider from "react-slick";
@@ -6,6 +6,7 @@ import bannerimg1 from "../../../assets/banner/banner1.jpg";
 import { LiaAngleRightSolid } from "react-icons/lia";
 
 const Banner = () => {
+  const [currentSlide, setcurrentSlide] = useState(0);
   const settings = {
     dots: true,
     infinite: true,
@@ -28,22 +29,35 @@ const Banner = () => {
         <ul style={{ margin: "0px", display: "flex" }}> {dots} </ul>
       </div>
     ),
-    customPaging: (i) => (
-      <div
-        style={{
-          width: "20px",
-          height: "20px",
-          borderRadius: "50%",
-          background: "#fff",
-          opacity: "0.5",
-          marginRight: "12px",
-        }}
-      ></div>
-    ),
+    customPaging: (i) =>
+      i == currentSlide ? (
+        <div
+          style={{
+            width: "20px",
+            height: "20px",
+            borderRadius: "50%",
+            background: "#DB4444",
+            border: "3px solid #ffff",
+            marginRight: "12px",
+          }}
+        ></div>
+      ) : (
+        <div
+          style={{
+            width: "20px",
+            height: "20px",
+            borderRadius: "50%",
+            background: "#fff",
+            opacity: "0.5",
+            marginRight: "12px",
+          }}
+        ></div>
+      ),
     afterChange: function (currentSlide) {
-      console.log("after Change : ", currentSlide);
+      setcurrentSlide(currentSlide);
     },
   };
+
   return (
     <div className="container">
       <div className="flex items-center justify-between">
